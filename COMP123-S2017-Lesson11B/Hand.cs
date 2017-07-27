@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
+ * Name: Alessandro Santos
  * Date: July 27, 2017
  * Description: This is the Hand class
  * It inherits from the CardList Abstract class

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
+ * Name: Alessandro Santos
+ * Date: July 27, 2017
  * Description: This is the Face enum
  * Version: 0.1 - Created the Face enum
  */

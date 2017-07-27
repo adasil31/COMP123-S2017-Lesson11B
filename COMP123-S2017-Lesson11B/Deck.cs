@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
+ * Name: Alessandro Santos
+ * Date: July 27, 2017
  * Description: This is the Deck class
  * It inherits from the CardList Abstract class
  * Version: 0.6 - Added the Deal1 method
@@ -102,6 +102,10 @@ namespace COMP123_S2017_Lesson11B
         {
             Card topCard = this[0];
             this.RemoveAt(0); // this removes the top card from the deck
+
+            // for testing / debugging only
+            Console.WriteLine("Dealt 1 card - Size of Deck: " + this.Count);
+
             return topCard;
         }
     }
