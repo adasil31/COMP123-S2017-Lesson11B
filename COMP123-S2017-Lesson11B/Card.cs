@@ -62,8 +62,7 @@ namespace COMP123_S2017_Lesson11B
             this.Face = face;
             this.Suit = suit;
         }
-
-
+        
         // PRIVATE METHODS
 
         // PUBLIC METHODS
@@ -75,8 +74,7 @@ namespace COMP123_S2017_Lesson11B
         {
             return new Card(this.Face, this.Suit);
         }
-
-
+        
         /// <summary>
         /// This method overwrites the first card with the second card
         /// </summary>

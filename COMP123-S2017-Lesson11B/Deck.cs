@@ -7,13 +7,13 @@ using System.Text;
  * Name: Tom Tsiliopoulos
  * Date: July 25, 2017
  * Description: This is the Deck class
- * It inherits from the List generic and uses Card as the base type
- * Version: 0.3 - Refactored Shuffle Method
+ * It inherits from the CardList Abstract class
+ * Version: 0.6 - Added the Deal1 method
  */
 
 namespace COMP123_S2017_Lesson11B
 {
-    public class Deck : List<Card>
+    public class Deck : CardList
     {
         // PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -30,22 +30,13 @@ namespace COMP123_S2017_Lesson11B
 
         // PUBLIC PROPERTIES
 
-        // CONSTRUCTOR
-        /// <summary>
-        /// This is the main constructor.
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
-
         // PRIVATE METHODS
 
         /// <summary>
         /// This is the Initialize method it sets values for private variables
         /// and public properties as well as other class objects.
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initialize the pseudo-random number generator
             this._random = new Random();
@@ -71,6 +62,9 @@ namespace COMP123_S2017_Lesson11B
         public override string ToString()
         {
             string outputString = "";
+
+            outputString += "Deck Contains  Number of Cards: " + this.Count + "\n";
+            outputString += "==================================\n";
 
             foreach (Card card in this)
             {
@@ -99,6 +93,16 @@ namespace COMP123_S2017_Lesson11B
                 Card.OverWrite(this[secondCard], this[firstCard]);
                 Card.OverWrite(this[firstCard], tempCard);
             }
+        }
+
+        /// <summary>
+        /// This method returns the top card of the deck
+        /// </summary>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0); // this removes the top card from the deck
+            return topCard;
         }
     }
 }
